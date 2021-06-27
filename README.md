@@ -68,3 +68,9 @@ life boolean,
 > VALUES ('Miller',4,'80x');
 > 
 ![image](https://user-images.githubusercontent.com/24431738/123550389-d55c8080-d78a-11eb-9aae-8745f1460bd7.png)
+
+- Updating tables
+
+``` UPDATE tars_db.planets SET rotation = 20, gravity = '30x'
+WHERE name = 'Miller';
+```
