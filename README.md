@@ -75,3 +75,8 @@ life boolean,
 UPDATE tars_db.planets SET rotation = 20, gravity = '30x'
 WHERE name = 'Miller';
 ```
+- Deleting a row
+```
+DELETE FROM tars_db.planets
+WHERE name = 'Miller';
+```
