@@ -26,8 +26,45 @@ The K8s has
 ## Creating a keyspace
 
 > create keyspace tars_db with replication = {'class':'SimpleStrategy', 'replication_factor':3};
+> 
 > use tars_db;
+> 
 > create table planets (name varchar primary key);
 ![image](https://user-images.githubusercontent.com/24431738/123549390-71d05400-d786-11eb-9a63-ab9080decbe8.png)
 
+>cqlsh> create keyspace tars_db with replication = {'class':'SimpleStrategy', 'replication_factor':3};
+>
+>cqlsh> use tars_db;
+>
+>cqlsh:tars_db> create table planets (name varchar primary key);
+>
+>cqlsh:tars_db> alter table planets add rotation int;
+>
+>cqlsh:tars_db> alter table planets add gravity varchar;
+>
+>cqlsh:tars_db> alter table planets add life varchar;
+>
+>cqlsh:tars_db> alter table courses with comment = ' In search of life near Gargantua '
+![image](https://user-images.githubusercontent.com/24431738/123549615-6cbfd480-d787-11eb-8cec-d9bf153304e7.png)
 
+```
+create table planets (
+name varchar primary key,
+rotation int,
+gravity varchar, 
+life boolean,
+) with comment = 'In search of life near Gargantua';
+```
+![image](https://user-images.githubusercontent.com/24431738/123550017-09cf3d00-d789-11eb-9aa0-0ff4ef43a3f0.png)
+
+- To query
+> **SELECT** name, title **FROM** tars_db.planets;
+ - To limit the number of results 
+> **SELECT** * **FROM** tars_db.planets **LIMIT** 100;
+
+- Inserting contents
+> INSERT INTO tars_db.planets (name,rotation,gravity)
+> 
+> VALUES ('Miller',4,'80x');
+> 
+![image](https://user-images.githubusercontent.com/24431738/123550389-d55c8080-d78a-11eb-9aae-8745f1460bd7.png)
