@@ -7,13 +7,18 @@ The K8s has
 ![image](https://user-images.githubusercontent.com/24431738/123548239-9413a300-d781-11eb-97bc-6d6e27ec8241.png)
 
 
-# Login to cassandra instance
+## Login to cassandra instance
 
-> nodetool status to verify the cluster status
+- Run the below command to login to the cassandra instance
+- 
+> kubectl exec -it cassandra-0 bash
+![image](https://user-images.githubusercontent.com/24431738/123549200-8b24d080-d785-11eb-802f-8920af66496d.png)
 
+
+- nodetool status to verify the cluster status
+> cassandra-0:/# nodetool status
 ![image](https://user-images.githubusercontent.com/24431738/123549029-e3a79e00-d784-11eb-930c-b3fcb9af60ab.png)
 
-> kubectl exec -it cassandra-0 bash
 
 > type the cqlsh command to initiate the terminal
 
