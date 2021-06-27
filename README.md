@@ -21,6 +21,13 @@ The K8s has
 
 
 > type the cqlsh command to initiate the terminal
-
 ![image](https://user-images.githubusercontent.com/24431738/123549102-29646680-d785-11eb-857f-6346c39b2daf.png)
+
+## Creating a keyspace
+
+> create keyspace tars_db with replication = {'class':'SimpleStrategy', 'replication_factor':3};
+> use tars_db;
+> create table planets (name varchar primary key);
+![image](https://user-images.githubusercontent.com/24431738/123549390-71d05400-d786-11eb-9a63-ab9080decbe8.png)
+
 
