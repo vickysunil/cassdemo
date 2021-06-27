@@ -71,6 +71,7 @@ life boolean,
 
 - Updating tables
 
-``` UPDATE tars_db.planets SET rotation = 20, gravity = '30x'
+```
+UPDATE tars_db.planets SET rotation = 20, gravity = '30x'
 WHERE name = 'Miller';
 ```
